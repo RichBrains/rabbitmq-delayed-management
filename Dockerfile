@@ -3,5 +3,5 @@ ADD https://dl.bintray.com/rabbitmq/community-plugins/3.7.x/rabbitmq_delayed_mes
 RUN apt-get update && apt-get install -y unzip && \ 
         unzip rabbitmq_delayed_message_exchange.zip -d /usr/lib/rabbitmq/lib/rabbitmq_server-${RABBITMQ_VERSION}/plugins/ \
         && chown -R rabbitmq:rabbitmq /usr/lib/rabbitmq/lib/rabbitmq_server-${RABBITMQ_VERSION}/plugins/ \
-        && rabbitmq-plugins enable --offline rabbitmq_delayed_message_exchange
+        && rabbitmq-plugins enable --offline rabbitmq_delayed_message_exchange && rabbitmq-plugins enable --offline rabbitmq_top
 
